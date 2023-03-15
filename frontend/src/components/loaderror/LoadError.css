@@ -1,0 +1,19 @@
+.load-error{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    /* background:red; */
+    justify-content:center;
+    text-align: center;
+}
+.load-error h1{
+    font-weight: 600;
+}
+.load-error span a{
+    margin: 8px auto;
+    color: #2684ff;
+}
+.load-error p span{
+    color: #2684ff;
+}

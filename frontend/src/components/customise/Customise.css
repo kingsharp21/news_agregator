@@ -1,0 +1,97 @@
+.customise.hidden{
+    display: none;
+}
+.customise{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.422);
+}
+.customise.flex{
+    justify-content: center;
+}
+.customise .customise-wrapper{
+    padding: 1rem;
+    width: 800px;
+    height: auto;
+    border-radius: 24px;
+    background-color: #fff;
+    border-width: 0;
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, .3), 0 4px 8px 3px rgba(60, 64, 67, .15);
+}
+.cutomise-header{
+    font-family: Roboto, Arial, sans-serif;
+    line-height: 1.25rem;
+    font-size: .875rem;
+    letter-spacing: .0142857143em;
+    font-weight: 400;
+    padding: 24px;
+    padding-bottom: 0px;
+}
+.cutomise-header h2{
+    font-size: 1.5rem;
+    line-height: 1.3333333333;
+    font-weight: 500;
+    padding-bottom: 12px;
+    color: #1f1f1f;
+}
+.cutomise-header p{
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #444746;
+}
+.options.grid{
+    grid-template-columns: repeat(2, 1fr);
+    padding:  0 24px;
+    /* background-color: #000000; */
+    height: 250px;
+    overflow-y: scroll;
+    
+}
+.options .keyword{
+    border-radius: 16px;
+    padding: 12px 16px;
+    /* margin-bottom: 8px; */
+    background-color: #f8fafd;
+    height: auto;
+    
+}
+.options .keyword h2{
+    font-size: 1rem;
+    font-family: "Google Sans", sans-serif;
+    line-height: 1.375;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #000000;
+    text-transform: capitalize;
+}
+.options .keyword .tags{
+    /* margin-top: 8px; */
+}
+.options .keyword .tags button{
+    padding: 0 .3rem;
+    border: 1px solid rgba(68, 67, 67, 0.366);
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 1rem;
+    /* max-width: 5rem; */
+}
+
+.cutom-btn.flex{    
+    padding: 8px 24px;
+    justify-content: flex-end;
+}
+.cutom-btn button{
+    margin-left: 1rem;
+}
+.cutom-btn .save{
+    background-color: blue;
+    color: white;
+}
