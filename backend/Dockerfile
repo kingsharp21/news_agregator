@@ -1,35 +1,15 @@
-version:'3.7'
+FROM php:7.3
 
-services:
+RUN apt-get update -y && apt-get install -y openssl zip unzip git
+RUN curl -ss https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN docker-php-ext-install pdo mbstring pdo_mysql
 
-    backend:
-        build:
-            context: ./server
-            dockerfile: Dockerfile
-        networks:
-            - app
+WORKDIR /app/backend
+COPY . .
 
-    frontend:
-        build:
-            context: ./server
-            dockerfile: Dockerfile
-
-        networks:
-            - app
-
-    db:
-        image: mysql:5.7.22
-        enviroment:
-            MYSQL_DATABASE: 'auth'
-            MYSQL_USER: 'root'
-            MYSQL_PASSWORD: ''
-        networks:
-            - app
+RUN composer install
 
 
-networks:
+EXPOSE 8000
 
-    app:
-
-        driver: bridge
-    
+CMD php artisan serve --host=0.0.0.0

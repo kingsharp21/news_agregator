@@ -1,7 +1,4 @@
-FROM node:alpine
-WORKDIR /app
-COPY package.json .
-RUN npm i
-COPY . .
+FROM node:alphine
+WORKDIR /app/frontend
 
-CMD ["npm","start"]
+COPY . .
