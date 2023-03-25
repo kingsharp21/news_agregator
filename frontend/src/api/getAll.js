@@ -19,7 +19,6 @@ export const fetchAllNews = () =>{
         const nytApiData = allData[1].data.response.docs;
         const newsApiData = allData[2].data.articles;
 
-        console.log(nytApiData);
 
         guardianApiData.map((article)=>{
           const sheme = createSheme(
@@ -68,9 +67,7 @@ export const fetchAllNews = () =>{
           })
           )
 
-    console.log('====================================');
-    console.log(data);
-    console.log('===================================='); 
+  
     
   }
 

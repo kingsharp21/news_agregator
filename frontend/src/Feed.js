@@ -20,12 +20,10 @@ import axios from "axios";
 export default function Feed({ sourceList }) {
   const animatedComponents = makeAnimated();
   const navigate = useNavigate();
-  // const newsCount = useRef(0)
   const [sources, setSources] = useState("");
   const [newsCount, setnewsCount] = useState(0);
   const [search, setSearch] = useState("");
   const [date, setDate] = useState('');
-  // const [date, setDate] = useState('2022-01-01');
   const [news,setNews] = useState([])
 
 
@@ -45,8 +43,6 @@ export default function Feed({ sourceList }) {
         const guardianApiData = allData[0].data.response.results;
         const nytApiData = allData[1].data.response.docs;
         const newsApiData = allData[2].data.articles;
-
-        console.log(nytApiData);
 
         guardianApiData.map((article)=>{
           const sheme = createSheme(
@@ -204,11 +200,9 @@ export default function Feed({ sourceList }) {
 
   const updateSearchValue = (event) => {
     setSearch(event.target.value);
-    console.log(event.target.value);
   };
   const updateDateValue = (event) => {
     setDate(event.target.value);
-    console.log(event.target.value);
   };
 
   useEffect(() => {
